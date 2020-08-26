@@ -2,12 +2,12 @@
 
 #include <iostream>
 
-class Test {
+class Set {
     private:
         int value;
     public:
-        Test();
-        Test(int);
+        Set();
+        Set(int);
 
         int get_value() { return value; }
 

@@ -1,6 +1,6 @@
 #include "test.h"
 
 
-Test::Test() : Test(0) {}
+Set::Set() : Set(0) {}
 
-Test::Test(int val) : value(val) {}
+Set::Set(int val) : value(val) {}
