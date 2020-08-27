@@ -1,4 +1,4 @@
-# Probelistic tests on how likely two tunes are to come in thw right order on a shuffle playlist
+# Probalistic test on how likely two tunes are to come in thw right order on a shuffle playlist
 
 Credits to Romain Chaix for the problem
 
