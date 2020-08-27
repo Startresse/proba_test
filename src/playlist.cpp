@@ -14,12 +14,8 @@ void Playlist::display() {
     std::cout << back() <<"]" << std::endl;
 }
 
-int Playlist::get_current_size() {
-    return end() - begin();
-}
-
 void Playlist::remove(int value) {
-    int pos = value;
+    int pos = std::min<int>(value, size() - 1);
     while(pos >= 0) {
         if (this->at(pos) == value) {
             erase(begin() + pos);
@@ -29,14 +25,34 @@ void Playlist::remove(int value) {
     }
 }
 
+void Playlist::replenish() {
+    clear();
+    for (int i = 0; i < init_length; i++) {
+        this->push_back(i);
+    }
+}
+
 bool Playlist::is_empty() {
-    return get_current_size() == 0;
+    return size() == 0;
+}
+
+int Playlist::get_random_tune() {
+    return at(rand() % size());
 }
 
 bool Playlist::test_if_two_in_a_row() {
-    int current;
+    bool result = false;
+    int current = get_random_tune();
+    remove(current);
     int previous;
     while (!is_empty()) {
-        return true;
+        previous = current;
+        current = get_random_tune();
+        remove(current);
+        if (current == previous + 1)
+            result = true;
+            break;
     }
+    replenish();
+    return result;
 }
