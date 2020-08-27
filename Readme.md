@@ -1,6 +1,6 @@
-# Template project
+# Probalistic test on how likely two tunes are to come in thw right order on a shuffle playlist
 
-This is a template prject for cpp with a Makefile
+Credits to Romain Chaix for the problem
 
 ## Make commands
 
