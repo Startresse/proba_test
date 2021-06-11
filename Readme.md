@@ -2,6 +2,10 @@
 
 Credits to Romain Chaix for the problem
 
+## Current State
+
+Stale, doesn't work.
+
 ## Make commands
 
 ```make``` to build the project
